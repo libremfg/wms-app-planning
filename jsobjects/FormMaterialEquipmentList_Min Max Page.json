@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "FormMaterialEquipmentList",
+    "pageId": "Min Max Page",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n  formatTable: () => {\n    var ret = [];\n    for (\n      let i = 0;\n      i <\n      QueryMaterialEquipment.data.data.getEquipment.materialEquipment.length;\n      i++\n    ) {\n      if (\n        QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n          .planningSummaryByState != null\n      ) {\n        for (\n          let j = 0;\n          j <\n          QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n            .planningSummaryByState.length;\n          j++\n        ) {\n          let line = {\n            \"Material Code\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .material.code,\n            \"Material Name\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .material.name,\n            \"Material Base UoM\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .material.baseUnitOfMeasure.code,\n            \"state code\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].state.status.code,\n            \"Inventory Max\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].inventoryMax,\n            \"Inventory Min\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].inventoryMin,\n            \"Production Order Qty\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].productionOrderQuantity,\n            \"Stock On Hand\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].stockOnHand,\n            \"Sales Order Qty\":\n              QueryMaterialEquipment.data.data.getEquipment.materialEquipment[i]\n                .planningSummaryByState[j].saleOrderQty,\n          };\n          ret.push(line);\n        }\n      }\n    }\n    return ret;\n  },\n};\n",
+    "variables": []
+  },
+  "id": "Min Max Page_FormMaterialEquipmentList",
+  "deleted": false,
+  "gitSyncId": "617f504e55c1eb6167b9999b_620b3a556b4b1e154a3c1ffe"
+}

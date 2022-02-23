@@ -1,0 +1,365 @@
+{
+  "unpublishedPage": {
+    "name": "Confirmation Page",
+    "slug": "confirmation-page",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1280,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1260,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 45,
+          "minHeight": 1270,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "multiRowSelection": false,
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "code",
+                "operationsDefinition",
+                "plannedEndDateTime",
+                "plannedStartDateTime",
+                "customColumn1",
+                "customColumn2",
+                "requestState"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.customColumn2.isCellVisible"
+                }
+              ],
+              "compactMode": "DEFAULT",
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 15,
+              "bottomRow": 90,
+              "parentRowSpace": 10,
+              "isSortable": true,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "primaryColumns.customColumn1.computedValue"
+                },
+                {
+                  "key": "primaryColumns.plannedStartDateTime.computedValue"
+                },
+                {
+                  "key": "primaryColumns.plannedEndDateTime.computedValue"
+                },
+                {
+                  "key": "primaryColumns.requestState.computedValue"
+                },
+                {
+                  "key": "primaryColumns.operationsDefinition.computedValue"
+                },
+                {
+                  "key": "primaryColumns.code.computedValue"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "derivedColumns.customColumn2.buttonLabel"
+                },
+                {
+                  "key": "primaryColumns.customColumn2.buttonLabel"
+                },
+                {
+                  "key": "derivedColumns.customColumn2.isCellVisible"
+                },
+                {
+                  "key": "primaryColumns.customColumn2.isCellVisible"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.computedValue"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "OperationsRequestId",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
+                },
+                "code": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "code",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "OperationsRequestCode",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.code))}}"
+                },
+                "operationsDefinition": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "operationsDefinition",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "operationsDefinition",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.operationsDefinition.name))}}"
+                },
+                "requestState": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "requestState",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "requestState",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.requestState.name))}}"
+                },
+                "plannedEndDateTime": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "plannedEndDateTime",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "plannedEndDateTime",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.plannedEndDateTime))}}"
+                },
+                "plannedStartDateTime": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "plannedStartDateTime",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "plannedStartDateTime",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.plannedStartDateTime))}}"
+                },
+                "customColumn1": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "text",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "materialCode",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.operationsDefinition.material.code))}}",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF"
+                },
+                "customColumn2": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "customColumn2",
+                  "columnType": "button",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.requestState.name==\"EquipmentAssignmentRequired\"?true:false))}}",
+                  "isDerived": true,
+                  "label": "Action",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Assign Equipment'))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "lslcf9peaf",
+              "derivedColumns": {
+                "customColumn1": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "text",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "materialCode",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.operationsDefinition.material.code))}}",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF"
+                },
+                "customColumn2": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "customColumn2",
+                  "columnType": "button",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.requestState.name==\"EquipmentAssignmentRequired\"?true:false))}}",
+                  "isDerived": true,
+                  "label": "Action",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Assign Equipment'))}}"
+                }
+              },
+              "rightColumn": 64,
+              "textSize": "PARAGRAPH",
+              "widgetId": "62iz1klh31",
+              "isVisibleFilters": true,
+              "tableData": "{{FetchInCartOperationsRequest.data.data.queryOperationsRequest}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "serverSidePaginationEnabled": false,
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "CENTER",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "code": 204,
+                "customColumn1": 163,
+                "plannedStartDateTime": 187,
+                "plannedEndDateTime": 184
+              }
+            },
+            {
+              "widgetName": "Text1",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.e6c93592.svg",
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 19.8125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "text": "Operations Request Confirmation",
+              "key": "3b476hpwu8",
+              "rightColumn": 16,
+              "textAlign": "LEFT",
+              "widgetId": "pcxr8rog76",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "fontSize": "PARAGRAPH"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Confirmation Page_FetchInCartOperationsRequest",
+              "name": "FetchInCartOperationsRequest",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryOperationsRequest@cascade{\n    id\n    code\n    operationsDefinition{\n      name\n      material{\n        code\n      }\n    }\n    plannedEndDateTime\n    plannedStartDateTime\n    requestState(filter:{or:[\n      {name:{eq:\"EquipmentAssignmentRequired\"}},\n      {name:{eq:\"Done\"}},\n      {name:{eq:\"In Cart\"}},\n      ],\n    }){\n      name\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "MainContainer",
+          "Table1",
+          "Text1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Confirmation Page",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "617f504e55c1eb6167b9999b_61c433bee89bc475f3cbab67"
+}

@@ -1,0 +1,684 @@
+{
+  "unpublishedPage": {
+    "name": "Min Max Page",
+    "slug": "min-max-page",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1094,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1250,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 52,
+          "minHeight": 1260,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "SelectEquipment",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "appsmith.store.SelectedEquipment",
+              "selectionType": "SINGLE_SELECT",
+              "parentColumnSpace": 46.96875,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                }
+              ],
+              "options": "{{QueryEquipmentId.data.data.queryEquipment}}",
+              "placeholderText": "select option",
+              "isDisabled": false,
+              "key": "hwjbj3i6so",
+              "isRequired": false,
+              "rightColumn": 20,
+              "widgetId": "cypdfiswbe",
+              "isVisible": true,
+              "label": "",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onOptionChange": "{{QueryMaterialEquipment.run()}}"
+            },
+            {
+              "widgetName": "Modal1",
+              "isCanvas": true,
+              "displayName": "Modal",
+              "iconSVG": "/static/media/icon.4975978e.svg",
+              "topRow": 77,
+              "bottomRow": 101,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "parentColumnSpace": 46.96875,
+              "leftColumn": 16,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 260,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 240,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Icon1",
+                      "rightColumn": 64,
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "displayName": "Icon",
+                      "iconSVG": "/static/media/icon.31d6cfe0.svg",
+                      "widgetId": "pham8zbutt",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "hideCard": true,
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24,
+                      "key": "b7a4aotp3v"
+                    },
+                    {
+                      "widgetName": "Text1",
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.e6c93592.svg",
+                      "widgetId": "y3encrm7up",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "hideCard": false,
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "HEADING1",
+                      "text": "Please choose an Operations Definition",
+                      "key": "p1ytg08znt"
+                    },
+                    {
+                      "widgetName": "Button1",
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "buttonColor": "#03B365",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 16,
+                      "bottomRow": 20,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "leftColumn": 36,
+                      "dynamicBindingPathList": [],
+                      "text": "Close",
+                      "isDisabled": false,
+                      "key": "llj6m5yezr",
+                      "rightColumn": 48,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "dkygshfk4j",
+                      "buttonStyle": "PRIMARY",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "SECONDARY"
+                    },
+                    {
+                      "widgetName": "Button2",
+                      "onClick": "{{AddOperationsRequest.run(() => showAlert('Operations Request Added!','success'), () => {})}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca02633.svg",
+                      "topRow": 16,
+                      "bottomRow": 20,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 48,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "text": "Confirm",
+                      "isDisabled": "{{Select1.selectedOptionLabel==null||Quantity.text==null?true:false}}",
+                      "key": "llj6m5yezr",
+                      "rightColumn": 60,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "duep83e19h",
+                      "buttonStyle": "PRIMARY_BUTTON",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "widgetName": "Select1",
+                      "isFilterable": false,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "DROP_DOWN_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "GREEN",
+                      "selectionType": "SINGLE_SELECT",
+                      "parentColumnSpace": 14.65625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        }
+                      ],
+                      "options": "{{QueryOperationsDefinition.data.data.getMaterialDefinition.operationsDefinitions}}",
+                      "isDisabled": false,
+                      "key": "hwjbj3i6so",
+                      "isRequired": false,
+                      "rightColumn": 21,
+                      "widgetId": "20yyzw4ih1",
+                      "isVisible": true,
+                      "label": "",
+                      "version": 1,
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false
+                    },
+                    {
+                      "widgetName": "Quantity",
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595.svg",
+                      "onSubmit": "",
+                      "topRow": 11,
+                      "bottomRow": 15,
+                      "tooltip": "Please Input numbers only",
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 14.65625,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "validation"
+                        }
+                      ],
+                      "labelStyle": "",
+                      "inputType": "NUMBER",
+                      "placeholderText": "Quantity",
+                      "isDisabled": false,
+                      "key": "g536uqduux",
+                      "validation": "{{Quantity.text.match(\"(\\d+(?:\\.\\d+)?)\")}}",
+                      "isRequired": true,
+                      "onTextChanged": "",
+                      "rightColumn": 21,
+                      "widgetId": "4y1uct2ets",
+                      "errorMessage": "",
+                      "isVisible": true,
+                      "label": "",
+                      "allowCurrencyChange": false,
+                      "version": 1,
+                      "parentId": "mxuskjomp3",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "regex": "(\\d+(?:\\.\\d+)?)",
+                      "iconAlign": "left",
+                      "defaultText": ""
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "wckunahs27",
+                  "rightColumn": 1127.25,
+                  "detachFromLayout": true,
+                  "widgetId": "mxuskjomp3",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "jjh3rrf7fz",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "key": "hqt0gszmnz",
+              "height": 240,
+              "rightColumn": 40,
+              "detachFromLayout": true,
+              "widgetId": "jjh3rrf7fz",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "width": 950
+            },
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "Material_Code",
+                "Material_Name",
+                "Material_Base_UoM",
+                "state_code",
+                "Inventory_Max",
+                "Inventory_Min",
+                "Production_Order_Qty",
+                "Stock_On_Hand",
+                "Sales_Order_Qty",
+                "customColumn1"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "primaryColumns.customColumn1.onClick"
+                }
+              ],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 4,
+              "bottomRow": 87,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 43.8125,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "primaryColumns.customColumn1.onClick"
+                }
+              ],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.Material_Code.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Material_Name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Material_Base_UoM.computedValue"
+                },
+                {
+                  "key": "primaryColumns.state_code.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Inventory_Max.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Inventory_Min.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Production_Order_Qty.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Stock_On_Hand.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Sales_Order_Qty.computedValue"
+                },
+                {
+                  "key": "derivedColumns.customColumn1.buttonLabel"
+                },
+                {
+                  "key": "primaryColumns.customColumn1.buttonLabel"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "Material_Code": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "Material_Code",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Material Code",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Material_Code))}}"
+                },
+                "Material_Name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "Material_Name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Material Name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Material_Name))}}"
+                },
+                "Material_Base_UoM": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "Material_Base_UoM",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Material Base UoM",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Material_Base_UoM))}}"
+                },
+                "state_code": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "state_code",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "state code",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.state_code))}}"
+                },
+                "Inventory_Max": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "Inventory_Max",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Inventory Max",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Inventory_Max))}}"
+                },
+                "Inventory_Min": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "Inventory_Min",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Inventory Min",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Inventory_Min))}}"
+                },
+                "Production_Order_Qty": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "Production_Order_Qty",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Production Order Qty",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Production_Order_Qty))}}"
+                },
+                "Stock_On_Hand": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "Stock_On_Hand",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Stock On Hand",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Stock_On_Hand))}}"
+                },
+                "Sales_Order_Qty": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "Sales_Order_Qty",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Sales Order Qty",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Sales_Order_Qty))}}"
+                },
+                "customColumn1": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "button",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "Add Job Order",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonColor": "#03B365",
+                  "menuColor": "#03B365",
+                  "labelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Add Job Order'))}}",
+                  "onClick": "{{showModal('Modal1');QueryOperationsDefinition.run()}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "2oqdrkgdyt",
+              "derivedColumns": {
+                "customColumn1": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "customColumn1",
+                  "columnType": "button",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": true,
+                  "label": "Add Job Order",
+                  "computedValue": "",
+                  "buttonStyle": "rgb(3, 179, 101)",
+                  "buttonLabelColor": "#FFFFFF",
+                  "buttonColor": "#03B365",
+                  "menuColor": "#03B365",
+                  "labelColor": "#FFFFFF",
+                  "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Add Job Order'))}}",
+                  "onClick": "{{showModal('Modal1');QueryOperationsDefinition.run()}}"
+                }
+              },
+              "rightColumn": 63,
+              "textSize": "PARAGRAPH",
+              "widgetId": "okvb9hg39u",
+              "isVisibleFilters": true,
+              "tableData": "{{FormMaterialEquipmentList.formatTable()}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "material": 362,
+                "planningSummaryByState": 1135
+              }
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Min Max Page_QueryEquipmentId",
+              "name": "QueryEquipmentId",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:null,\n\tquery:`\n\t\tquery{\n  queryEquipment@cascade{\n\tlabel:name\n\tvalue:id\n\tinventoryHandlingRules{\n\tid\n\t}\n\t\n\t}\n\t}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Min Max Page_QueryOperationsDefinition",
+              "name": "QueryOperationsDefinition",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\n\t\"input\": Table1.selectedRow.Material_Code\n},\n\tquery:`\n\t\tquery queryOperationsDefinition($input:String){\n  getMaterialDefinition(code:$input){\n    operationsDefinitions{\n      label:name\n\t\t\t\tvalue:id\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Min Max Page_QueryMaterialEquipment",
+              "name": "QueryMaterialEquipment",
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "JSON.stringify({\n\tvariables:{\"input\":SelectEquipment.selectedOptionValue},\n\tquery:`\n\tquery QueryEquipment($input:ID!){  \n  getEquipment (id:$input)@cascade{\n    id\n    materialEquipment{\n\t\t\t\tmaterial{\n        code\n        name\n          baseUnitOfMeasure{\n            code\n          }\n      }\n      planningSummaryByState(filter:{isPlanned:true}){\n        state{\n          status{\n            code\n          }\n\t\t\t\t\tisPlanned\n        }\n        inventoryMax\n        inventoryMin\n        productionOrderQuantity\n        stockOnHand\n        saleOrderQty\n      }\n    }\n  }\n}\n\t`\n})"
+              ],
+              "timeoutInMillisecond": 10000000
+            }
+          ]
+        ],
+        "widgetNames": [
+          "Button1",
+          "Button2",
+          "Canvas1",
+          "Icon1",
+          "MainContainer",
+          "Modal1",
+          "Quantity",
+          "Select1",
+          "SelectEquipment",
+          "Table1",
+          "Text1"
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Min Max Page",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "617f504e55c1eb6167b9999b_61c433bfe89bc475f3cbace3"
+}
